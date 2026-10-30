@@ -1,0 +1,164 @@
+.inicio {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 36px 28px 90px;
+  display: grid;
+  grid-template-columns: 6fr 5fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.inicio-etiqueta {
+  margin: 0 0 18px;
+  font-family: "Jost", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--cafe);
+}
+
+.inicio h1 {
+  margin: 0;
+  font-size: 58px;
+  line-height: 1.08;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+
+.inicio-linea {
+  width: 56px;
+  height: 1px;
+  background: var(--rosa);
+  margin: 28px 0;
+}
+
+.inicio-texto {
+  max-width: 46ch;
+  margin: 0 0 34px;
+  font-size: 17px;
+  line-height: 1.85;
+  font-weight: 300;
+}
+
+.inicio-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.inicio-boton {
+  display: inline-block;
+  padding: 15px 34px;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 999px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.inicio-boton--lleno {
+  background: var(--cafe);
+  color: #fff;
+  border: 1px solid var(--cafe);
+}
+
+.inicio-boton--lleno:hover {
+  background: var(--cafe-oscuro);
+  border-color: var(--cafe-oscuro);
+}
+
+.inicio-boton--borde {
+  color: var(--cafe);
+  border: 1px solid var(--cafe);
+}
+
+.inicio-boton--borde:hover {
+  background: var(--cafe);
+  color: #fff;
+}
+
+.inicio-boton:focus-visible {
+  outline: 2px solid var(--cafe);
+  outline-offset: 3px;
+}
+
+/* Foto en arco con marco rosé */
+.inicio-marco {
+  position: relative;
+}
+
+.inicio-marco::before {
+  content: "";
+  position: absolute;
+  inset: -14px 14px 14px -14px;
+  border: 1px solid var(--rosa);
+  border-radius: 999px 999px 0 0;
+}
+
+.inicio-foto {
+  position: relative;
+  aspect-ratio: 4 / 5.2;
+  border-radius: 999px 999px 14px 14px;
+  overflow: hidden;
+  background: var(--arena);
+}
+
+
+.inicio-marco--logo::before {
+  display: none;
+}
+
+.inicio-foto--logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: auto;
+  background: transparent;
+  border-radius: 0;
+}
+
+.inicio-foto--logo img {
+  width: 70%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 800px) {
+  .inicio {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    padding: 16px 20px 64px;
+    text-align: center;
+  }
+
+  .inicio-marco {
+    order: -1;
+    width: min(290px, 100%);
+    margin: 0 auto;
+  }
+
+  .inicio h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .inicio-linea {
+    margin: 22px auto;
+  }
+
+  .inicio-texto {
+    margin: 0 auto 28px;
+    font-size: 16px;
+  }
+
+  .inicio-botones {
+    justify-content: center;
+  }
+
+  .inicio-boton {
+    padding: 13px 26px;
+  }
+}

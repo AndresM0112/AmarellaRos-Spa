@@ -1,0 +1,103 @@
+.form-servicio {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-campo label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-suave);
+}
+
+.form-campo input,
+.form-campo select,
+.form-campo textarea {
+  font: inherit;
+  padding: 10px 12px;
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  background-color: white;
+  color: var(--color-texto);
+}
+
+.form-campo input:focus,
+.form-campo select:focus,
+.form-campo textarea:focus {
+  outline: none;
+  border-color: var(--color-marca);
+  box-shadow: 0 0 0 3px rgba(176, 137, 104, 0.25);
+}
+
+.form-campo textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-fila {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form-agregar {
+  display: flex;
+  gap: 8px;
+}
+
+.form-agregar input {
+  flex: 1;
+}
+
+.form-items {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.form-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #f5ede4;
+  border-radius: 20px;
+  padding: 4px 6px 4px 12px;
+  font-size: 13px;
+}
+
+.form-item-quitar {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--color-marca-oscuro);
+  font-size: 12px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+}
+
+.form-item-quitar:hover {
+  background-color: rgba(176, 137, 104, 0.25);
+}
+
+.form-mensaje--error {
+  background-color: #fbeaea;
+  color: #9b2c2c;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin: 0;
+  font-size: 14px;
+}
+
+.form-enviar {
+  align-self: flex-end;
+}

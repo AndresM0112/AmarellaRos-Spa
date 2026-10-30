@@ -1,0 +1,409 @@
+/* .detalle-cabecera {
+  padding: 32px 0 80px;
+}
+
+.detalle-contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.detalle-volver {
+  display: inline-block;
+  margin-bottom: 28px;
+  color: #6b6259;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.detalle-volver:hover {
+  color: #8f6c4e;
+}
+
+.detalle-categoria {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #6b6259;
+  margin: 0 0 8px;
+}
+
+.detalle-cabecera h1 {
+  text-align: left;
+  font-size: 44px;
+  margin: 0 0 16px;
+  color: #3a332d;
+}
+
+.detalle-meta {
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  color: #6b6259;
+}
+
+.detalle-cuerpo {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 48px;
+  align-items: start;
+  padding-bottom: 60px;
+}
+
+.detalle-cuerpo h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 26px;
+  color: #3a332d;
+  margin: 0 0 16px;
+}
+
+.detalle-cuerpo p {
+  color: #6b6259;
+  line-height: 1.7;
+}
+
+.detalle-tarjeta {
+  background: white;
+  border: 1px solid #e6ddd3;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.detalle-tarjeta h2 {
+  font-size: 20px;
+}
+
+.detalle-incluye {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detalle-incluye li {
+  display: flex;
+  gap: 12px;
+  font-size: 14px;
+  color: #6b6259;
+}
+
+.detalle-incluye li::before {
+  content: "✓";
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #b08968;
+  border-radius: 50%;
+  color: #b08968;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 800px) {
+  .detalle-cuerpo {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .detalle-cabecera h1 {
+    font-size: 32px;
+  }
+}
+.detalle-lateral {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 24px;
+}
+
+.detalle-precio {
+  text-align: center;
+  background: #f3ebe2;
+}
+
+.detalle-cuerpo .detalle-precio p {
+  margin: 0;
+}
+
+.detalle-cuerpo .detalle-precio-valor {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  color: #3a332d;
+  margin-top: 8px;
+}
+
+.detalle-cabecera--con-foto {
+  background-image:
+    linear-gradient(to bottom, rgba(251, 247, 242, 0) 55%, #fbf7f2 100%),
+    linear-gradient(to right, rgba(251, 247, 242, 0.85) 0%, rgba(251, 247, 242, 0.3) 55%, rgba(251, 247, 242, 0) 100%),
+    var(--foto);
+  background-size: cover;
+  background-position: center;
+} */
+
+.detalle {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px 20px 40px;
+  text-align: center;
+}
+
+.detalle-volver {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--cafe);
+  border-radius: 50%;
+  color: var(--cafe);
+  font-size: 18px;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+
+.detalle-volver:hover {
+  background-color: var(--cafe);
+  color: #fff;
+}
+
+.detalle-volver:focus-visible {
+  outline: 2px solid var(--cafe);
+  outline-offset: 3px;
+}
+
+/* Foto en arco con marco rosé */
+.detalle-foto-marco {
+  position: relative;
+  width: min(400px, 100%);
+  margin: 0 auto;
+}
+
+.detalle-foto-marco::before {
+  content: "";
+  position: absolute;
+  inset: -14px 14px 14px -14px;
+  border: 1px solid var(--rosa);
+  border-radius: 999px 999px 0 0;
+}
+
+.detalle-foto {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: 999px 999px 14px 14px;
+  overflow: hidden;
+  background: var(--arena);
+}
+
+.detalle-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+}
+
+.detalle-sinfoto {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Jost", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cafe);
+  opacity: 0.55;
+}
+
+.detalle-duracion {
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  z-index: 2;
+  background: var(--crema);
+  color: var(--cafe);
+  font-size: 12px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* Texto */
+.detalle-categoria {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  margin: 0 0 6px;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--cafe);
+}
+
+.detalle h1 {
+  margin: 0;
+  font-size: 50px;
+  letter-spacing: 0.07em;
+  line-height: 1.1;
+}
+
+.detalle-linea {
+  width: 56px;
+  height: 1px;
+  background: var(--rosa);
+  margin: 18px auto 30px;
+}
+.detalle-descripcion {
+  max-width: 52ch;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.85;
+  font-weight: 300;
+}
+
+.detalle h2 {
+  margin: 56px 0 22px;
+  font-size: 14px;
+  letter-spacing: 0.24em;
+}
+
+/* "Incluye" en chips */
+.detalle-chips {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.detalle-chip {
+  padding: 9px 18px;
+  border: 1px solid var(--cafe);
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--cafe-oscuro);
+}
+
+/* Barra de precio fija */
+.detalle-barra {
+  position: sticky;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 56px;
+  padding: 12px 32px;
+  background: var(--cafe);
+  color: var(--crema);
+  border-radius: 999px;
+  box-shadow: 0 10px 30px rgba(46, 31, 24, 0.25);
+}
+
+.detalle-barra p {
+  margin: 0;
+}
+
+.detalle-barra .guion {
+  font-size: 28px;
+  line-height: 1;
+  color: var(--arena);
+  margin-right: 8px;
+}
+
+.detalle-barra-valor {
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.detalle-barra--con-boton {
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 10px 10px 28px;
+}
+
+.detalle-barra-boton {
+  display: inline-block;
+  padding: 14px 30px;
+  background: var(--crema);
+  color: var(--cafe-oscuro);
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  border-radius: 999px;
+  transition: background-color 0.2s;
+}
+
+.detalle-barra-boton:hover {
+  background: #fff;
+}
+
+.detalle-barra-boton:focus-visible {
+  outline: 2px solid var(--crema);
+  outline-offset: 3px;
+}
+
+@media (max-width: 800px) {
+  .detalle {
+    padding: 20px 20px 32px;
+  }
+
+  .detalle-foto-marco {
+    width: min(300px, 100%);
+  }
+
+  .detalle h1 {
+    font-size: 34px;
+  }
+
+  .detalle-barra {
+    bottom: 12px;
+    padding: 10px 22px;
+  }
+
+  .detalle-barra-valor {
+    font-size: 24px;
+  }
+
+    .detalle-barra--con-boton {
+    padding: 8px 8px 8px 20px;
+  }
+
+  .detalle-barra .guion {
+    font-size: 24px;
+  }
+
+  .detalle-barra-valor {
+    font-size: 22px;
+  }
+
+  .detalle-barra-boton {
+    padding: 12px 18px;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+  }
+}

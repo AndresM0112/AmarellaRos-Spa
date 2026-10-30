@@ -1,0 +1,127 @@
+.servicio-enlace {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+}
+
+.servicio {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: transform 0.15s;
+}
+
+.servicio-enlace:hover .servicio {
+  transform: translateY(-3px);
+}
+
+.servicio-enlace:focus-visible {
+  outline: 2px solid var(--borde);
+  outline-offset: 4px;
+  border-radius: 14px;
+}
+
+/* Foto en arco */
+.servicio-imagen {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: 999px 999px 14px 14px;
+  overflow: hidden;
+  background: var(--arena);
+}
+
+.servicio-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+}
+
+.servicio-sinfoto {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Jost", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cafe);
+  opacity: 0.55;
+}
+
+.duracion {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--crema);
+  color: var(--cafe);
+  font-size: 12px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* Texto */
+.servicio-cuerpo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 18px 0 0;
+  flex: 1;
+}
+
+.categoria {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cafe);
+}
+
+.servicio h3 {
+  font-size: 20px;
+  letter-spacing: 0.08em;
+  margin: 0;
+}
+
+.descripcion {
+  max-width: 30ch;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 300;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* .precio-desde {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cafe);
+  margin-right: 8px;
+} */
+
+.precio-desde {
+  font-family: "Allura", cursive;
+  font-size: 28px;
+  line-height: 1;
+  color: var(--cafe);
+  margin-right: 6px;
+}
+.precio .guion {
+  font-size: 20px;
+  margin-right: 4px;
+}
