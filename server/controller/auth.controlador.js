@@ -1,4 +1,4 @@
-import { autenticar } from "../services/auth.Service.js";
+import { autenticar } from "../services/auth.service.js";
 
 export async function login(req, res) {
   const { correo, clave } = req.body;
@@ -7,6 +7,9 @@ export async function login(req, res) {
     return res.status(400).json({ ok: false, mensaje: "Correo y clave son obligatorios" });
   }
 
+  if (typeof correo !== "string" || typeof clave !== "string") {
+  return res.status(400).json({ ok: false, mensaje: "Correo y clave son obligatorios" });
+}
   try {
     const token = await autenticar(correo, clave);
 
