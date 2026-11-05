@@ -1,8 +1,6 @@
-   node_modules/
-   .env
-   .env.*
-   !.env.example
-   dist/
-   server/uploads/
-   server/.gitignore
-   client/.gitignore
+node_modules/
+.env
+.env.*
+!.env.example
+dist/
+server/uploads/
