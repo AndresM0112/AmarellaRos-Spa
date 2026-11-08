@@ -8,6 +8,7 @@ import { CARPETA_UPLOADS } from './middleware/upload.middleware.js'
 
 
 const app = express()
+app.set("trust proxy", 1)
 const PUERTO = process.env.PORT || 3000;
 
 app.use(helmet({ crossOriginResourcePolicy: { policy: "cross-origin" } }));
@@ -40,6 +41,6 @@ app.use((err, req, res, next) => {
   res.status(500).json({ ok: false, mensaje: "Error interno del servidor" });
 });
 
-app.listen(PUERTO, function () {
+app.listen(PUERTO,"127.0.0.1", function () {
   console.log(`Servidor corriendo en http://localhost:${PUERTO}`)
 })
